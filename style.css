@@ -1,4 +1,4 @@
-form{
+.formInformation{
     display: flex;
     flex-flow: column;
 }
