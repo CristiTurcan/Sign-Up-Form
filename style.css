@@ -2,3 +2,11 @@
     display: flex;
     flex-flow: column;
 }
+
+.error:invalid {
+    border: 1px solid red;
+}
+
+li {
+    list-style: none;
+}

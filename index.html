@@ -19,9 +19,17 @@
             <label for="phone_number">PHONE NUMBER</label>
             <input type="tel" name="phone_number" id="phone_number" minlength="10" maxlength="10" required >
             <label for="user_password">PASSWORD</label>
-            <input type="password" name="user_password" id="user_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,}" required>
+            <input type="password" name="user_password" id="user_password" class="error" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,}" required>
+            <div class="passwordInstructions">
+                <li>
+                    <ul id="upper">Uppercase letter</ul>
+                    <ul id="lower">Lowercase letter</ul>
+                    <ul id="number">At least one number</ul>
+                    <ul id="character">At least one special character</ul>
+                </li>
+            </div>
             <label for="user_confirm_password">CONFIRM PASSWORD</label>
-            <input type="password" name="user_confirm_password" id="user_confirm_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,}" required>
+            <input type="password" name="user_confirm_password" id="user_confirm_password" class="error" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,}" required>
         </section>
         <section class="button">
             <button type="submit">CREATE ACCOUNT</button>
