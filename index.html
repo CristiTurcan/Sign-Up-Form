@@ -26,10 +26,12 @@
                     <ul id="lower">Lowercase letter</ul>
                     <ul id="number">At least one number</ul>
                     <ul id="character">At least one special character</ul>
+                    <ul id="password_length">Minimum 8 characters</ul>
                 </li>
             </div>
             <label for="user_confirm_password">CONFIRM PASSWORD</label>
             <input type="password" name="user_confirm_password" id="user_confirm_password" class="error" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,}" required>
+            <div><span class="not_match">Passwords do not match</span></div>
         </section>
         <section class="button">
             <button type="submit">CREATE ACCOUNT</button>

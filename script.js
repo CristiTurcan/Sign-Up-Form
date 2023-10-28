@@ -13,6 +13,9 @@ number.style.color='red';
 const character = document.querySelector('#character');
 character.classList.add('character');
 character.style.color='red';
+const password_length = document.querySelector('#password_length')
+password_length.classList.add('password_length');
+password_length.style.color='red';
 
 
 // hide/activate password instructions
@@ -59,6 +62,13 @@ const searchSpecialCharacter = function (str) {
         character.style.color='red';
 }
 
+const searchPasswordLength = function (str) {
+    if(str.length > 7)
+        password_length.style.color='green';
+    else
+        password_length.style.color='red';
+}
+
 function checkPassword () {
     var password = user_password.value;
 
@@ -66,6 +76,39 @@ function checkPassword () {
     searchUppercase(password);
     searchNumber(password);
     searchSpecialCharacter(password);
+    searchPasswordLength(password);
 }
 
 user_password.addEventListener('input' , checkPassword);
+
+
+const confirm_password = document.querySelector('#user_confirm_password');
+
+const not_match = document.querySelector('.not_match');
+not_match.classList.add('not_match');
+not_match.style.display='none';
+not_match.style.color='red';
+
+confirm_password.addEventListener('focus', () => {
+    not_match.style.display='block';
+});
+
+confirm_password.addEventListener('focusout', () => {
+    not_match.style.display='none';
+});
+
+function confirmPassword () {
+    return user_password.value === confirm_password.value;
+}
+
+confirm_password.addEventListener('input', () => {
+    if(confirmPassword()) {
+        not_match.style.color = 'green';
+        not_match.textContent='Passwords match';
+    }
+    else {
+        not_match.style.color = 'red';
+        not_match.textContent = 'Passwords do not match';
+    }
+})
+
