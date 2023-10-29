@@ -1,6 +1,14 @@
 .formInformation{
     display: flex;
-    flex-flow: column;
+    flex-flow: column wrap;
+    padding: 30px;   
+    position: relative; 
+    box-shadow: 0px 15px 10px -15px #111;
+}
+
+.formInformation > input {
+    width: 250px;
+    height: 25px;
 }
 
 .error:invalid {
@@ -9,4 +17,103 @@
 
 li {
     list-style: none;
+}
+
+img {
+    height: 100vh;
+    width: 400px;
+}
+
+.imageSection {
+    position: relative;
+}
+
+.title {
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 100px;
+    z-index: 1000;
+    height: 150px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #FFFFFF;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+body {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.right-part {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+.header {
+    background-color: rgb(249, 249, 249);
+    flex-grow: 1;
+    padding-left: 30px;
+    padding-bottom: 5px;
+    font-size: 19px; /* can cause problems with height of .right-part */
+}
+
+
+.formSection {
+    flex-grow: 1;
+}
+
+.formAndButton {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.buttonSection {
+    background-color: rgb(249, 249, 249);
+    flex-grow: 1;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+.submitButton {
+  background-color: #13aa52;
+  border: 1px solid #13aa52;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.submitButton:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+    .submitButton {
+    padding: 10px 30px;
+  }
 }
