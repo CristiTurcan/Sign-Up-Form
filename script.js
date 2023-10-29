@@ -112,3 +112,10 @@ confirm_password.addEventListener('input', () => {
     }
 })
 
+const submitButton = document.querySelector('.submitButton')
+submitButton.addEventListener('click', (event) => {
+    if(!confirmPassword()) {
+        alert('Passwords do not match');
+        event.preventDefault();
+    }
+})
